@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "name": "nestjs-app",
+    "builds": [
+        {
+            "src": "dist/main.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/main.js"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "production",
+        "PORT": "3000"
+    },
+    "buildCommand": "yarn build",
+    "installCommand": "yarn install",
+    "devCommand": "yarn start:dev"
+}
