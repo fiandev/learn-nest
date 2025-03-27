@@ -1,1 +1,4 @@
+# .husky/pre-commit
+yarn format
 yarn test
+git update-index --again
